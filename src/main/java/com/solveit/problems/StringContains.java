@@ -12,6 +12,8 @@ public class StringContains {
         System.out.println(findContains("bc", "abc"));
         System.out.println(findContains("aaaaaaaaabc", "abc"));
         System.out.println(findContains("aaaaaaaaabc", "aaaaaaaaa"));
+
+        //void second loop by keeping the index of last iteration
     }
 
     private static boolean findContains(String source, String dest) {
