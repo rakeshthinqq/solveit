@@ -8,23 +8,23 @@ public class FindDistinctPairs {
         System.out.println(numberOfPairs(new int[]{6,1,3,46,1,3,9}, 47));
     }
 
-    static int numberOfPairs(int[] a, long k) {
-        int count = 0;
-        if(a==null){
-            return 0;
-        }
-        Map<Integer,Long> rem = new HashMap<Integer, Long>();
+    static int numberOfPairs(int[] intArray, long result) {
+       Map<Integer, Integer> mp = new HashMap<>();
 
-        int i = 0;
-        for(int val: a){
-            long remVal = k - val;
-            if(rem.containsValue(new Long(val))){
-                count = count + 1;
-            }else {
-                rem.put(i,remVal);
-            }
-            i = i+2;;
-        }
-        return count;
+       int count = 0;
+       for(int number : intArray) {
+           int rem = result - number;
+           System.out.println(mp);
+           if(mp.containsKey(number) && mp.get(number) == null && !mp.containsValue(rem)) {
+               count = ++count;
+               mp.put(number, rem);
+           } else {
+               if(!mp.containsKey(rem)  && !mp.containsValue(rem)) {
+                   mp.put(rem, null);
+               }
+           }
+       }
+        
+       return count;
     }
 }
