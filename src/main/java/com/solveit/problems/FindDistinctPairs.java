@@ -13,7 +13,7 @@ public class FindDistinctPairs {
 
        int count = 0;
        for(int number : intArray) {
-           int rem = result - number;
+           int rem = (int) (result - number);
            System.out.println(mp);
            if(mp.containsKey(number) && mp.get(number) == null && !mp.containsValue(rem)) {
                count = ++count;
