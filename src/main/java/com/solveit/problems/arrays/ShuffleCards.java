@@ -46,24 +46,7 @@ public class ShuffleCards {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // tests
-
     @Test
     public void bothHalvesAreTheSameLengthTest() {
         final int[] half1 = {1, 4, 5};
